@@ -6,3 +6,37 @@
 //
 
 import Foundation
+import GithubAPI
+import Moya
+
+
+class LoginPresenter {
+    private var loginView: LoginView
+    
+    public init(_ loginView: LoginView) {
+        self.loginView = loginView
+    }
+    
+    public func doLogin(_ username: String, _ password: String) {
+        loginView.showLoadingStatus()
+        
+        // do the login
+        let authentication = BasicAuthentication(username: username, password: password)
+        
+        let userApi = UserAPI(authentication: authentication)
+        
+        AppServiceLocator.shared.addService(service: userApi)
+        userApi.getUser { [unowned self] (response, error) in
+            if let response = response {
+                self.loginView.hideLoadingStatus()
+                let userData = Converter.toUserDTO(response)
+                self.loginView.loginCompleted(userData)
+            } else {
+                print(error ?? "")
+            }
+        }
+        
+        
+        
+    }
+}

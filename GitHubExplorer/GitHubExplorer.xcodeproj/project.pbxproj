@@ -20,6 +20,31 @@
 		FD26054128398A91006B117C /* GitHubExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD26054028398A91006B117C /* GitHubExplorerUITests.swift */; };
 		FD26054328398A91006B117C /* GitHubExplorerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD26054228398A91006B117C /* GitHubExplorerUITestsLaunchTests.swift */; };
 		FD52C2012839954900A5C689 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FD52C2002839954900A5C689 /* .gitignore */; };
+		FD71A4E7283C1F7100C45A42 /* UserAPI+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4E6283C1F7100C45A42 /* UserAPI+Extras.swift */; };
+		FD71A4E8283C1F7100C45A42 /* UserAPI+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4E6283C1F7100C45A42 /* UserAPI+Extras.swift */; };
+		FD71A4EB283D36D900C45A42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4EA283D36D900C45A42 /* LoginViewController.swift */; };
+		FD71A4EC283D36D900C45A42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4EA283D36D900C45A42 /* LoginViewController.swift */; };
+		FD71A4ED283D36D900C45A42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4EA283D36D900C45A42 /* LoginViewController.swift */; };
+		FD71A4F0283D380800C45A42 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4EF283D380800C45A42 /* LoginPresenter.swift */; };
+		FD71A4F1283D380800C45A42 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4EF283D380800C45A42 /* LoginPresenter.swift */; };
+		FD71A4F3283D388700C45A42 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4F2283D388700C45A42 /* LoginView.swift */; };
+		FD71A4F4283D388700C45A42 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4F2283D388700C45A42 /* LoginView.swift */; };
+		FD71A4F7283DE99D00C45A42 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4F6283DE99D00C45A42 /* UserViewController.swift */; };
+		FD71A4F8283DE99D00C45A42 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4F6283DE99D00C45A42 /* UserViewController.swift */; };
+		FD71A4FA283DEA2F00C45A42 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4F9283DEA2F00C45A42 /* UserView.swift */; };
+		FD71A4FB283DEA2F00C45A42 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4F9283DEA2F00C45A42 /* UserView.swift */; };
+		FD71A4FD283DEA3E00C45A42 /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4FC283DEA3E00C45A42 /* UserPresenter.swift */; };
+		FD71A4FE283DEA3E00C45A42 /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A4FC283DEA3E00C45A42 /* UserPresenter.swift */; };
+		FD71A5012840118F00C45A42 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A5002840118F00C45A42 /* UIUtils.swift */; };
+		FD71A5022840118F00C45A42 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A5002840118F00C45A42 /* UIUtils.swift */; };
+		FD71A505284012BF00C45A42 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A504284012BF00C45A42 /* UserDTO.swift */; };
+		FD71A506284012BF00C45A42 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A504284012BF00C45A42 /* UserDTO.swift */; };
+		FD71A5082840166B00C45A42 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A5072840166B00C45A42 /* Converter.swift */; };
+		FD71A5092840166B00C45A42 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A5072840166B00C45A42 /* Converter.swift */; };
+		FD71A50B28402D4700C45A42 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A50A28402D4700C45A42 /* ServiceLocator.swift */; };
+		FD71A50C28402D4700C45A42 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A50A28402D4700C45A42 /* ServiceLocator.swift */; };
+		FD71A50E2840336900C45A42 /* FollwingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A50D2840336900C45A42 /* FollwingResponse.swift */; };
+		FD71A50F2840336900C45A42 /* FollwingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71A50D2840336900C45A42 /* FollwingResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +87,18 @@
 		FD26054028398A91006B117C /* GitHubExplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubExplorerUITests.swift; sourceTree = "<group>"; };
 		FD26054228398A91006B117C /* GitHubExplorerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubExplorerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FD52C2002839954900A5C689 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FD71A4E6283C1F7100C45A42 /* UserAPI+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAPI+Extras.swift"; sourceTree = "<group>"; };
+		FD71A4EA283D36D900C45A42 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FD71A4EF283D380800C45A42 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		FD71A4F2283D388700C45A42 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FD71A4F6283DE99D00C45A42 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		FD71A4F9283DEA2F00C45A42 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		FD71A4FC283DEA3E00C45A42 /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
+		FD71A5002840118F00C45A42 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		FD71A504284012BF00C45A42 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		FD71A5072840166B00C45A42 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		FD71A50A28402D4700C45A42 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		FD71A50D2840336900C45A42 /* FollwingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollwingResponse.swift; sourceTree = "<group>"; };
 		FDD14C0DF7A04B5D5524F891 /* Pods-GitHubExplorerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubExplorerTests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubExplorerTests/Pods-GitHubExplorerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +179,10 @@
 		FD26051E28398A8E006B117C /* GitHubExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				FD71A503284012AE00C45A42 /* DTO */,
+				FD71A4FF2840117F00C45A42 /* Utils */,
+				FD71A4E9283D36BF00C45A42 /* Scenes */,
+				FD71A4E5283C1F5400C45A42 /* API */,
 				FD26051F28398A8E006B117C /* AppDelegate.swift */,
 				FD26052128398A8E006B117C /* SceneDelegate.swift */,
 				FD26052328398A8E006B117C /* ViewController.swift */,
@@ -168,6 +209,62 @@
 				FD26054228398A91006B117C /* GitHubExplorerUITestsLaunchTests.swift */,
 			);
 			path = GitHubExplorerUITests;
+			sourceTree = "<group>";
+		};
+		FD71A4E5283C1F5400C45A42 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FD71A4E6283C1F7100C45A42 /* UserAPI+Extras.swift */,
+				FD71A50D2840336900C45A42 /* FollwingResponse.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FD71A4E9283D36BF00C45A42 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FD71A4F5283DE98400C45A42 /* User */,
+				FD71A4EE283D37F400C45A42 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FD71A4EE283D37F400C45A42 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FD71A4EA283D36D900C45A42 /* LoginViewController.swift */,
+				FD71A4EF283D380800C45A42 /* LoginPresenter.swift */,
+				FD71A4F2283D388700C45A42 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FD71A4F5283DE98400C45A42 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				FD71A4F6283DE99D00C45A42 /* UserViewController.swift */,
+				FD71A4F9283DEA2F00C45A42 /* UserView.swift */,
+				FD71A4FC283DEA3E00C45A42 /* UserPresenter.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		FD71A4FF2840117F00C45A42 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FD71A5002840118F00C45A42 /* UIUtils.swift */,
+				FD71A50A28402D4700C45A42 /* ServiceLocator.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FD71A503284012AE00C45A42 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				FD71A504284012BF00C45A42 /* UserDTO.swift */,
+				FD71A5072840166B00C45A42 /* Converter.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,9 +507,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD71A4F0283D380800C45A42 /* LoginPresenter.swift in Sources */,
+				FD71A4F7283DE99D00C45A42 /* UserViewController.swift in Sources */,
+				FD71A5082840166B00C45A42 /* Converter.swift in Sources */,
+				FD71A4F3283D388700C45A42 /* LoginView.swift in Sources */,
+				FD71A4FD283DEA3E00C45A42 /* UserPresenter.swift in Sources */,
 				FD26052428398A8E006B117C /* ViewController.swift in Sources */,
+				FD71A50B28402D4700C45A42 /* ServiceLocator.swift in Sources */,
+				FD71A5012840118F00C45A42 /* UIUtils.swift in Sources */,
+				FD71A50E2840336900C45A42 /* FollwingResponse.swift in Sources */,
+				FD71A505284012BF00C45A42 /* UserDTO.swift in Sources */,
 				FD26052028398A8E006B117C /* AppDelegate.swift in Sources */,
 				FD26052228398A8E006B117C /* SceneDelegate.swift in Sources */,
+				FD71A4E7283C1F7100C45A42 /* UserAPI+Extras.swift in Sources */,
+				FD71A4FA283DEA2F00C45A42 /* UserView.swift in Sources */,
+				FD71A4EB283D36D900C45A42 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +529,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD71A50C28402D4700C45A42 /* ServiceLocator.swift in Sources */,
+				FD71A4F8283DE99D00C45A42 /* UserViewController.swift in Sources */,
+				FD71A4F4283D388700C45A42 /* LoginView.swift in Sources */,
+				FD71A506284012BF00C45A42 /* UserDTO.swift in Sources */,
+				FD71A4FE283DEA3E00C45A42 /* UserPresenter.swift in Sources */,
+				FD71A4FB283DEA2F00C45A42 /* UserView.swift in Sources */,
+				FD71A5022840118F00C45A42 /* UIUtils.swift in Sources */,
+				FD71A4EC283D36D900C45A42 /* LoginViewController.swift in Sources */,
+				FD71A50F2840336900C45A42 /* FollwingResponse.swift in Sources */,
+				FD71A4E8283C1F7100C45A42 /* UserAPI+Extras.swift in Sources */,
 				FD26053728398A91006B117C /* GitHubExplorerTests.swift in Sources */,
+				FD71A5092840166B00C45A42 /* Converter.swift in Sources */,
+				FD71A4F1283D380800C45A42 /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD26054328398A91006B117C /* GitHubExplorerUITestsLaunchTests.swift in Sources */,
+				FD71A4ED283D36D900C45A42 /* LoginViewController.swift in Sources */,
 				FD26054128398A91006B117C /* GitHubExplorerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

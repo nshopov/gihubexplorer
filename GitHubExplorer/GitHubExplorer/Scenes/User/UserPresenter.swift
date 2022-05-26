@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class UserPresenter {
+    private var userView: UserView
+    public init(_ userView: UserView) {
+        self.userView = userView
+    }
+}
