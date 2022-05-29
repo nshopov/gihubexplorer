@@ -6,7 +6,9 @@
 //
 
 import XCTest
+import GithubAPI
 @testable import GitHubExplorer
+
 
 class GitHubExplorerTests: XCTestCase {
 

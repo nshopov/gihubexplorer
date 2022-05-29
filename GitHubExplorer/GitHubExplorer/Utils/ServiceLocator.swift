@@ -22,13 +22,12 @@ final class AppServiceLocator {
         return (some is Any.Type) ? "\(some)" : "\(typeName(some: some))"
     }
 
-    func addService<T>(service: T) {
+    func addService<T: Any>(service: T) {
         let key = typeName(some: T.self)
         reg[key] = service
-        //print("Service added: \(key) / \(typeName(service))")
     }
 
-    func getService<T>() -> T? {
+    func getService<T: Any>() -> T? {
         let key = typeName(some: T.self)
         return reg[key] as? T
     }

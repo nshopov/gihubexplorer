@@ -25,7 +25,7 @@ public class LoginViewController: UIViewController, LoginView {
     @IBAction func loginClick(_ sender: Any) {
         guard let username = self.tbUsername.text, !username.isEmpty,
               let password = self.tbPassword.text, !password.isEmpty else {
-            UIUtils.showError(self, "Please provide username and/or passowrd.")
+            self.showError("Please provide username and/or passowrd.")
             return
         }
         
@@ -41,14 +41,27 @@ public class LoginViewController: UIViewController, LoginView {
         // Hide loading status
     }
     
+    func showErrorMessage(_ message: String) {
+        self.showError(message)
+    }
+    
+    func clear() {
+        self.tbPassword.text = ""
+        self.tbUsername.text = ""
+    }
+        
+    
     func loginCompleted(_ userData: UserDTO) {
         // navigate to the user controller
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let userViewController = storyBoard.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
+        let mainTabbarController = storyBoard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
         
-        userViewController.userData = userData
+        let profileNavBar = mainTabbarController.viewControllers![0] as! UINavigationController
+        let profileController = profileNavBar.viewControllers[0] as! UserViewController
+        profileController.userData = userData
         
-        UIApplication.shared.windows.first?.rootViewController = userViewController
+        
+        UIApplication.shared.windows.first?.rootViewController = mainTabbarController
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 }

@@ -31,16 +31,28 @@ class UserViewController: UIViewController, UserView {
           self.avatarImage.image = UIImage(data: data)
         }
         
+        if self.userData?.followers == 0 {
+            btnFollowers.isEnabled = false
+        }
+        
+        if self.userData?.following == 0 {
+            btnFollowing.isEnabled = false
+        }
+        
         btnFollowing.setTitle("\(userData?.following ?? 0) Following", for: .normal)
         btnFollowers.setTitle("\(userData?.followers ?? 0) Followers", for: .normal)
         
     }
     
-    
     @IBAction func foolwingClicked(_ sender: Any) {
-        // ask the presenter to collect the data for following people.
-        
-        // Once gathered, navigate to following view
+        performSegue(withIdentifier: "usersSegue", sender: self)
     }
     
+    @IBAction func folloersClicked(_ sender: Any) {
+        performSegue(withIdentifier: "usersSegue", sender: self)
+    }
+    
+    func showErrorMessage(_ message: String) {
+        self.showErrorMessage(message)
+    }
 }

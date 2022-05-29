@@ -6,10 +6,15 @@
 //
 
 import Foundation
+import GithubAPI
 
 class UserPresenter {
     private var userView: UserView
+    private let userAPIservice: UserAPI? = nil
+    
     public init(_ userView: UserView) {
         self.userView = userView
     }
+    
+  
 }

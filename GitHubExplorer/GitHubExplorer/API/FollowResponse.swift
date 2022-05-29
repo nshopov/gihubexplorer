@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public struct FollowingResponse: Codable {
+public struct FollowResponse: Codable {
     
     public let  login: String
     public let  id: Int

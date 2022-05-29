@@ -10,4 +10,6 @@ protocol LoginView {
     func showLoadingStatus()
     func hideLoadingStatus()
     func loginCompleted(_ userResponse: UserDTO)
+    func showErrorMessage(_ message: String)
+    func clear()
 }

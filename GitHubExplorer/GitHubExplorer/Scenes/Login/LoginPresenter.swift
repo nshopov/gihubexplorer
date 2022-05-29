@@ -27,12 +27,14 @@ class LoginPresenter {
         
         AppServiceLocator.shared.addService(service: userApi)
         userApi.getUser { [unowned self] (response, error) in
-            if let response = response {
+            if let response = response,
+               let id = response.id {
                 self.loginView.hideLoadingStatus()
                 let userData = Converter.toUserDTO(response)
                 self.loginView.loginCompleted(userData)
             } else {
-                print(error ?? "")
+                loginView.showErrorMessage("There is problem with login, check your credentials")
+                loginView.clear()
             }
         }
         

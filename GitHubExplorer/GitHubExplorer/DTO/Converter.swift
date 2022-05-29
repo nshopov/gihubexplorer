@@ -33,4 +33,17 @@ struct Converter {
         
         return result
     }
+    
+    public static func toFollowUserDTO(_ followResponse: FollowResponse) -> FollowUserDTO {
+        let result = FollowUserDTO(login: followResponse.login,
+                                   id: followResponse.id,
+                                   avatarUrl: followResponse.avatarUrl,
+                                   url: followResponse.url, reposUrl: followResponse.reposUrl)
+        return result
+    }
+    
+    public static func toFollowUsersDTOArray(_ followResponseArray: [FollowResponse]) -> [FollowUserDTO] {
+        let result = followResponseArray.map { Converter.toFollowUserDTO($0)}
+        return result
+    }
 }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol UserView {
-    
+protocol UserView: BaseView {
+    func showErrorMessage(_ message: String)
 }
