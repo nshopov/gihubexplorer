@@ -27,6 +27,6 @@ public class UsersPresenter {
     }
     
     public func onSelect(_ user: FollowUserDTO) {
-        self.usersView.showRepositoryDetailFor(user)
+        self.usersView.showRepositoriesFor(user)
     }
 }

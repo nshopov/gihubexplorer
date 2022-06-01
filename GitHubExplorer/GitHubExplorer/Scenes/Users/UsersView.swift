@@ -9,5 +9,5 @@ import Foundation
 
 public protocol UsersView: BaseView {
     func loadUsers(_ users: [FollowUserDTO])
-    func showRepositoryDetailFor(_ user: FollowUserDTO)
+    func showRepositoriesFor(_ user: FollowUserDTO)
 }

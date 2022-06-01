@@ -1,34 +1,20 @@
 PODS:
-  - Alamofire (5.6.1)
   - BaseAPI (0.2.1)
   - GithubAPI (0.0.11):
     - BaseAPI
-  - Moya (15.0.0):
-    - Moya/Core (= 15.0.0)
-  - Moya/Core (15.0.0):
-    - Alamofire (~> 5.0)
-  - Swinject (2.8.1)
 
 DEPENDENCIES:
   - GithubAPI
-  - Moya (~> 15.0)
-  - Swinject
 
 SPEC REPOS:
   trunk:
-    - Alamofire
     - BaseAPI
     - GithubAPI
-    - Moya
-    - Swinject
 
 SPEC CHECKSUMS:
-  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   BaseAPI: 7a3abac9fa1e19147a5c87dcfbb1829a584cd1ca
   GithubAPI: 706761f300a8a1c5c30ad85016ac366a5dbb058d
-  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
-  Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
 
-PODFILE CHECKSUM: ca14fcc62eb6f7afa23450a19c22232d82bf80ab
+PODFILE CHECKSUM: fce8139151999de4699ace1b6e5907c245da2d4f
 
 COCOAPODS: 1.11.3

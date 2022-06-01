@@ -6,10 +6,7 @@ target 'GitHubExplorer' do
   use_frameworks!
 
   # Pods for GitHubExplorer
-  pod 'Moya', '~> 15.0'
-  pod 'Swinject'
   pod 'GithubAPI'
-
 
   target 'GitHubExplorerTests' do
     inherit! :search_paths

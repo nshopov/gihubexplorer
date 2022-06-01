@@ -18,7 +18,7 @@ class GitHubExplorerIntegrationTests: XCTestCase {
     
     // Remark: Do put these into a constant or config file which is .gitignored!
     private let username = "nshopov"
-    private let password = "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"
+    private let password = "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"
     
     
     private var authentication: BasicAuthentication! = nil
@@ -41,17 +41,94 @@ class GitHubExplorerIntegrationTests: XCTestCase {
                 expectation.fulfill()
                 isLoggedin = true
             }
-            else {
-            }
+         
         }
         
-        waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 5)
         
         XCTAssertTrue(isLoggedin)
     }
     
     
-    func testFollowingUsers() throws {
+    public func testFollowingUsersWithActuallyHavigUsersTheLoggedInUserFollows() throws {
+        let expectation = self.expectation(description: "has following users")
+        var usersToFollowFound = false
         
+        
+        userAPI.getFollowingUsers { response, error in
+            if let response = response,
+                response.count > 0  {
+                expectation.fulfill()
+                usersToFollowFound = true
+            }
+        }
+        
+        waitForExpectations(timeout: 5)
+        
+        
+        XCTAssertTrue(usersToFollowFound)
+    }
+    
+    public func testUserHasNoFollowers() throws {
+        let expectation = self.expectation(description: "has following users")
+        var userHasNoFollowers = false
+        
+        
+        userAPI.getFollowerUsers { response, error in
+            if let response = response,
+               response.count ==  0  {
+                expectation.fulfill()
+                userHasNoFollowers = true
+            }
+        }
+        
+        waitForExpectations(timeout: 5)
+        
+        
+        XCTAssertTrue(userHasNoFollowers)
+    }
+    
+    public func testGetPublicRepositories() {
+        let repositoriesAPI = RepositoriesAPI()
+        
+        let expectation = expectation(description: "Repositories")
+        
+        var repositoriesRetrieved = false
+        
+        repositoriesAPI.repositories(user: "nshopov", type: .public, sort: .none, direction: .asc) { response, error in
+            if response != nil {
+                expectation.fulfill()
+                repositoriesRetrieved = true
+            } else {
+                print(error as Any)
+            }
+        }
+        
+        waitForExpectations(timeout: 5)
+        
+        XCTAssertTrue(repositoriesRetrieved)
+    }
+    
+    public func  testSearch() {
+        let searchCriteria = "paul"
+        
+        let searchAPI = SearchAPI()
+        
+        var searchHasResults = true
+        
+        let searchExpectation = expectation(description: "Search expectation")
+        
+        searchAPI.searchUsers(q: searchCriteria) { response, error in
+            if let response = response,
+               let items = response.items,
+               items.count > 0 {
+                searchHasResults = true
+                searchExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: 5)
+        
+        XCTAssertTrue(searchHasResults)
     }
 }

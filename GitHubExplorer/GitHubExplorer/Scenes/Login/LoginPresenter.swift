@@ -7,7 +7,6 @@
 
 import Foundation
 import GithubAPI
-import Moya
 
 
 class LoginPresenter {
@@ -31,14 +30,18 @@ class LoginPresenter {
                let id = response.id {
                 self.loginView.hideLoadingStatus()
                 let userData = Converter.toUserDTO(response)
+                Storage.shared.setObjectFor(key: "ProfileUserData", val: userData)
                 self.loginView.loginCompleted(userData)
             } else {
                 loginView.showErrorMessage("There is problem with login, check your credentials")
                 loginView.clear()
             }
         }
-        
-        
-        
+    }
+    
+    public func present() {
+        if let userDto = Storage.shared.getObjectFor(key: "ProfileUserData") as UserDTO? {
+            self.loginView.loginCompleted(userDto)
+        }
     }
 }

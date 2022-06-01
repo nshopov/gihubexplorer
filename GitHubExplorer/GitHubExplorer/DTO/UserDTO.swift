@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserDTO {
+struct UserDTO: Codable {
     public let avatarUrl : String?
     public let collaborators : Int?
     public let company : String?

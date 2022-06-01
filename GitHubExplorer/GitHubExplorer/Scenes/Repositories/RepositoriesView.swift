@@ -8,5 +8,6 @@
 import Foundation
 
 public protocol RepositoriesView: BaseView {
-    
+    func loadRepositories(_ repositories: [RepositoryDTO]?)
+    func showRepositoryDetail(_ repository: RepositoryDTO)
 }

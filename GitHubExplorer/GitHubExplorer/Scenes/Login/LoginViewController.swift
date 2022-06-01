@@ -20,6 +20,7 @@ public class LoginViewController: UIViewController, LoginView {
     public override func viewDidLoad() {
         // Wire up presenter
         self.loginPresenter = LoginPresenter(self)
+        self.loginPresenter.present()
     }
     
     @IBAction func loginClick(_ sender: Any) {
@@ -52,12 +53,11 @@ public class LoginViewController: UIViewController, LoginView {
         
     
     func loginCompleted(_ userData: UserDTO) {
-        // navigate to the user controller
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let mainTabbarController = storyBoard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
         
         let profileNavBar = mainTabbarController.viewControllers![0] as! UINavigationController
-        let profileController = profileNavBar.viewControllers[0] as! UserViewController
+        let profileController = profileNavBar.viewControllers[0] as! ProfileViewController
         profileController.userData = userData
         
         

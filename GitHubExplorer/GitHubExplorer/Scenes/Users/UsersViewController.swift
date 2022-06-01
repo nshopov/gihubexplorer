@@ -13,6 +13,7 @@ public class UsersViewController: UITableViewController, UsersView {
     
     private var usersPresenter: UsersPresenter!
     private var users: [FollowUserDTO]?
+    private var currentFollowUser: FollowUserDTO?
     
     public override func viewDidLoad() {
         // bootstrap the presenter
@@ -29,8 +30,20 @@ public class UsersViewController: UITableViewController, UsersView {
         self.tableView.reloadData()
     }
     
-    public func showRepositoryDetailFor(_ user: FollowUserDTO) {
-        
+    
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "repositoriesSegue" {
+            let destinationVC = segue.destination as! RepositoriesViewController
+            
+            if let currentFollowUser = self.currentFollowUser {
+                destinationVC.followUser = currentFollowUser
+            }
+        }
+    }
+    
+    public func showRepositoriesFor(_ user: FollowUserDTO) {
+        self.currentFollowUser = user
+        performSegue(withIdentifier: "repositoriesSegue", sender: self)
     }
     
     public func showLoadingStatus() {
@@ -65,7 +78,5 @@ public class UsersViewController: UITableViewController, UsersView {
         if let user = self.users?[indexPath.row] {
             self.usersPresenter.onSelect(user)
         }
-        
-        
     }
 }
