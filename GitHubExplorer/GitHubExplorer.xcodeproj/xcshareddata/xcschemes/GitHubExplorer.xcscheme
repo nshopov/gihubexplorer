@@ -31,12 +31,12 @@
          <EnvironmentVariable
             key = "username"
             value = "nshopov"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "password"
             value = "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"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
       </EnvironmentVariables>
       <Testables>
