@@ -22,6 +22,11 @@ class ProfilePresenter {
         self.profileView.showRepoDetail(repoData)
     }
     
+    public func doLogout(){
+        Storage.shared.removeObjectFor(key: "ProfileUserData")
+        self.profileView.navigateToLoginScreen()
+    }
+    
     func load(_ userData: UserDTO?){
         if let imgUrl = URL(string: userData?.avatarUrl ?? ""),
            let data = try? Data(contentsOf: imgUrl) {

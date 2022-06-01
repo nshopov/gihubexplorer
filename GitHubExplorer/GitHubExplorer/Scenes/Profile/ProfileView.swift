@@ -14,4 +14,5 @@ protocol ProfileView: BaseView {
     func setAvatarImage(imgData: Data)
     func loadRepositories(_ repositories: [RepositoryDTO])
     func showRepoDetail(_ repoData: RepositoryDTO)
+    func navigateToLoginScreen() 
 }

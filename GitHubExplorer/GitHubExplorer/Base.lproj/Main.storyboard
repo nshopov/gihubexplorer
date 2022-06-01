@@ -186,6 +186,9 @@
                                 <rect key="frame" x="310" y="131" width="70" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="qBc-jh-2J5" eventType="touchUpInside" id="YlA-2H-maA"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3ne-Jv-FYq" userLabel="Repositories">
                                 <rect key="frame" x="0.0" y="243" width="414" height="583"/>
@@ -419,7 +422,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Sxm-3W-x6n"/>
-        <segue reference="oRz-go-E6l"/>
+        <segue reference="86f-9h-zEH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>

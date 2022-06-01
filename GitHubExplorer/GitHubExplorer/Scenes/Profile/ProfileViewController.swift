@@ -40,6 +40,21 @@ class ProfileViewController: UIViewController, ProfileView, UITableViewDataSourc
         performSegue(withIdentifier: "usersSegue", sender: self)
     }
     
+    
+    @IBAction func logoutClicked(_ sender: Any) {
+        // Remove profile from the store
+        self.profilePrsenter.doLogout()
+    }
+    
+    func navigateToLoginScreen() {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        
+        
+        UIApplication.shared.windows.first?.rootViewController = loginVC
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
+    
     private var currentRepositoryData: RepositoryDTO?
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showRepository" {
