@@ -27,18 +27,6 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "NO">
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "username"
-            value = "nshopov"
-            isEnabled = "NO">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "password"
-            value = "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"
-            isEnabled = "NO">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
       <Testables>
          <TestableReference
             skipped = "NO">
